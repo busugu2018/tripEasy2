@@ -6,6 +6,12 @@
 http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd">
 	<flow name="traveltip_externalsystemFlow" doc:id="e00806a1-6358-434a-9958-1a68886e25d8" >
 		<http:listener doc:name="Listener" doc:id="3386544e-e099-461c-a573-575491411bd6" config-ref="HTTP_Listener_config" path="${http.listener.path}"/>
-		<logger level="INFO" doc:name="Logger" doc:id="fdcd6b87-751c-4afa-a828-e4b7f606f4f2" />
+		<logger level="INFO" doc:name="Logger" doc:id="fdcd6b87-751c-4afa-a828-e4b7f606f4f2" message="Request Received for travelTip External System for transactionID: #[attributes.headers.transactionID]"/>
+		<logger level="INFO" doc:name="Logger" doc:id="10d44cbf-9853-407a-bfee-28c9be24f635" message="Request Sent for travelTip External System for transactionID: #[attributes.headers.transactionID]"/>
+		<error-handler >
+			<on-error-propagate enableNotifications="true" logException="true" doc:name="On Error Propagate" doc:id="7f2e0678-6239-475c-8fdc-da950f612268" >
+				<logger level="INFO" doc:name="Logger" doc:id="231cb247-4e43-4f9d-a298-d248623e5355" message="Error Occured for travelTip External System for transactionID: #[attributes.headers.transactionID]"/>
+			</on-error-propagate>
+		</error-handler>
 	</flow>
 </mule>

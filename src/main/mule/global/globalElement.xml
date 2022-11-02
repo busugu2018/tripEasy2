@@ -5,9 +5,11 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="
 http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd">
-	<http:listener-config name="HTTP_Listener_config" doc:name="HTTP Listener config" doc:id="7cca567a-8922-403f-ae62-35430451f550" >
+	
+	<http:listener-config name="HTTP_Listener_config_globalElement" doc:name="HTTP Listener config" doc:id="94f8ccbf-a531-40ac-bb42-470228075cc7" >
 		<http:listener-connection host="${http.listener.host}" port="${http.listener.port}" />
 	</http:listener-config>
-	<configuration-properties doc:name="Configuration properties" doc:id="2f26f17d-869f-4f01-8e26-c840946db7cc" file="config/local.yaml" />
+	<configuration-properties doc:name="Configuration properties" doc:id="e300ba33-c6a1-47b4-8db3-9c11aa794894" file="global/local.yaml" />
+	
 	
 	</mule>

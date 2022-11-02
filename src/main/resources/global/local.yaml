@@ -3,3 +3,4 @@ http:
     host: "localhost"
     port: "9081"
     path: "/travelTipCall/{serviceType}"
+    

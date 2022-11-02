@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns="http://www.mulesoft.org/schema/mule/core" xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd">
+	<flow name="travelTip_schedulesImplementationFlow" doc:id="e14cbd61-2409-4383-9b9c-e353c8e51f69" >
+		<logger level="INFO" doc:name="Logger" doc:id="ef3afd68-77e8-45a8-9f45-010d153e5e45" />
+	</flow>
+</mule>

@@ -214,4 +214,5 @@ type java_security_PublicKey = {|  |} {"typeAlias": "PublicKey",
       </types:output-event>
     </types:processor-declaration>
   </types:enrichment>
+  <types:enrichment select="#e81c18fd-68f6-41ff-8f0d-fda48fd36f51"/>
 </types:mule>

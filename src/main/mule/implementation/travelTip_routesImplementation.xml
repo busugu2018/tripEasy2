@@ -6,11 +6,11 @@
 http://www.mulesoft.org/schema/mule/db http://www.mulesoft.org/schema/mule/db/current/mule-db.xsd
 http://www.mulesoft.org/schema/mule/ee/core http://www.mulesoft.org/schema/mule/ee/core/current/mule-ee.xsd">
 	<db:config name="Database_Config" doc:name="Database Config" doc:id="03a6ad5d-7112-41b2-8692-881a13b2b421" >
-		<db:my-sql-connection host="127.0.0.1" port="3306" user="root" password="Boomboom00" database="localDb" />
+		<db:my-sql-connection host="127.0.0.1" port="3306" user="root" password="Boomboom00" database="localDb1" />
 	</db:config>
 	<flow name="travelTip_routesImplementationFlow" doc:id="5eb203e8-aa9f-4263-b89e-2959aadf40d5" >
 		<db:select doc:name="Select" doc:id="6adb3bdb-531f-4a85-80ca-106f0581e256" config-ref="Database_Config">
-			<db:sql ><![CDATA[SELECT * FROM localDb.routes where companyName='travelTip']]></db:sql>
+			<db:sql ><![CDATA[SELECT * FROM localDb1.routes where companyName='travelTip']]></db:sql>
 		</db:select>
 		<ee:transform doc:name="Transform Message" doc:id="2631fd47-32cc-4c85-a9c3-3af46f0adbf4" >
 			<ee:message >
@@ -20,6 +20,5 @@ output application/json
 payload]]></ee:set-payload>
 			</ee:message>
 		</ee:transform>
-		<logger level="INFO" doc:name="Logger" doc:id="1f92319b-57b0-4b2f-b36e-b8513d659269" message="#[payload]"/>
 	</flow>
 </mule>
